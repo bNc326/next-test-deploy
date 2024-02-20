@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+const dynamic = 'force-dynamic'
+
 export default async function Home() {
   const res = await fetch("http://localhost:3000/api/hello", {
     next: { revalidate: 3600 },
