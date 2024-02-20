@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Suspense } from "react";
 
 export default async function Home() {
-  const res = await fetch(process.env.NEXT_PUBLIC_API as string, {
+  const res = await fetch(process.env.API as string, {
     cache: "no-store",
   });
   const data = await res.json();
