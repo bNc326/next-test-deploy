@@ -1,10 +1,7 @@
-import { Joan } from "next/font/google";
 import Image from "next/image";
 
-const dynamic = "force-dynamic";
-
 export default async function Home() {
-  const res = await fetch(process.env.NEXT_PUBLIC_API as string, {
+  const res = await fetch("http://localhost:3000/api/hello" as string, {
     cache: "no-store",
   });
   const data = await res.json();
