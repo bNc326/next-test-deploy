@@ -1,9 +1,7 @@
 import Image from "next/image";
 
 const getData = async () => {
-  const res = await fetch("http://localhost:3000/api/hello", {
-    cache: "no-store",
-  });
+  const res = await fetch("http://localhost:3000/api/hello");
 
   if (!res.ok) {
     throw new Error("Hello error");
